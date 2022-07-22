@@ -26,14 +26,7 @@ public class Circle extends Figure{
 
 	@Override
 	public int compare(Figure o1, Figure o2) {
-		Circle c1 = (Circle) o1;
-		Circle c2 = (Circle) o2;
-		if(c1.getRadius() == c2.getRadius()) {
-			return 1;
-		}else if (c1.getRadius() <= c2.getRadius()) {
-			return -1;
-		}
-		return 0;
+		return -Double.compare(o1.getPerimeter(), o2.getPerimeter());
 	}
 
 	@Override

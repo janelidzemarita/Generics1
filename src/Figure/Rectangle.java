@@ -126,14 +126,8 @@ public class Rectangle extends Figure{
 	 */
 	@Override
 	public int compare(Figure o1, Figure o2) {
-		Rectangle rec1 = (Rectangle) o1;
-		Rectangle rec2 = (Rectangle) o2;
-		if(rec1.getPerimeter() == rec2.getPerimeter()) {
-			return 1;
-		}else if (rec1.getPerimeter() <= rec2.getPerimeter()) {
-			return -1;
-		}
-		return 0;
+
+		return -Double.compare(o1.getPerimeter(), o1.getPerimeter());
 	}
 	
 }

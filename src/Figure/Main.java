@@ -1,7 +1,7 @@
 package Figure;
 
-import java.util.HashMap;
-import java.util.TreeMap;
+import java.util.regex.Pattern;
+import java.util.HashSet;
 
 public class Main {
 
@@ -9,11 +9,19 @@ public class Main {
 		String str = args[0];
 		
 		
-		Figure f = new Triangle(3,4,5);
-		
 	}
 	public static void readCircles(String args) {
+		Pattern formatCircle = Pattern.compile("([0-9]+)");
+		
 		
 	}
-
+	public static void readRectangles(String args) {
+		Pattern formatRectangle = Pattern.compile("([0-9]+[-][0-9]+)");
+		
+	}
+	public static void readTriangles(String args) {
+		Pattern formatTriangle = Pattern.compile("([0-9]+[-][0-9]+[-][0-9]+)");
+		
+	}
+	
 }

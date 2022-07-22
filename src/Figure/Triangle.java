@@ -124,13 +124,6 @@ public class Triangle extends Figure{
 	 */
 	@Override
 	public int compare(Figure o1, Figure o2) {
-		Triangle tr1 = (Triangle) o1;
-		Triangle tr2 = (Triangle) o2;
-		if(tr1.getPerimeter() == tr2.getPerimeter()) {
-			return 1;
-		}else if (tr1.getPerimeter() <= tr2.getPerimeter()) {
-			return -1;
-		}
-		return 0;
+		return -Double.compare(o1.getPerimeter(), o1.getPerimeter());
 	}
 }
