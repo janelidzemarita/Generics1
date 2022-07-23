@@ -1,5 +1,7 @@
 package Figure;
 
+import java.util.Collection;
+
 public class Circle extends Figure{
 	
 	private double radius;
@@ -16,17 +18,6 @@ public class Circle extends Figure{
 
 	public void setRadius(double radius) {
 		this.radius = radius;
-	}
-	/*
-	 Task 1 06.07.2022
-	 
-	 Circle does not have getLength method, but has getPerimeter
-	 
-	 */
-
-	@Override
-	public int compare(Figure o1, Figure o2) {
-		return -Double.compare(o1.getPerimeter(), o2.getPerimeter());
 	}
 
 	@Override
@@ -59,6 +50,16 @@ public class Circle extends Figure{
 			return true;
 		}
 		return false;
+	}
+	/*
+	 Task 1 06.07.2022
+	 
+	 Circle does not have getLength method, but has getPerimeter
+	 
+	 */
+	@Override
+	public int compareTo(Figure o) {
+		return -Double.compare(o.getPerimeter(), this.getPerimeter());
 	}
 
 }

@@ -122,8 +122,10 @@ public class Triangle extends Figure{
 	 
 	 Triangle does not have a getLength method but has a getPerimeter so I used that.
 	 */
+
 	@Override
-	public int compare(Figure o1, Figure o2) {
-		return -Double.compare(o1.getPerimeter(), o1.getPerimeter());
+	public int compareTo(Figure o) {
+
+		return Double.compare(o.getPerimeter(), this.getPerimeter());
 	}
 }

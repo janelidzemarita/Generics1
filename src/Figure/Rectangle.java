@@ -124,10 +124,11 @@ public class Rectangle extends Figure{
 	 Task 1. 06.07.2022
 	 I used getPerimeter insted of getLength, all our figures has getPerimeter but not getLength
 	 */
-	@Override
-	public int compare(Figure o1, Figure o2) {
 
-		return -Double.compare(o1.getPerimeter(), o1.getPerimeter());
+	@Override
+	public int compareTo(Figure o) {
+
+		return -Double.compare(o.getPerimeter(), this.getPerimeter());
 	}
 	
 }
